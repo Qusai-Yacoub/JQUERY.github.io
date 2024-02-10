@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        *{margin: 0;box-shadow: 0}
+
+        .FULLNAME {
+            width: 50%;
+            background: white;
+            margin: 0 auto;
+            box-shadow: 0px 6px 20px 6px rgba(0, 0, 0, 0.8);
+        }
+        .NAME {
+            border-bottom: 1px solid gray;
+            cursor: pointer;
+            font-weight: 700;
+            padding: 1.5em;
+        }
+        .NAMEQUSAI {
+            display: none;
+            border-bottom: 1px solid white;
+            background:white;
+            padding: 1.5em;
+            color: black;
+        }
+        #QUSAIFULL {
+            background: linear-gradient(to bottom right, rgb(9, 247, 152), rgb(77, 192, 245))
+        }
+        .NAME::before {
+            content: '';
+            display: inline-block;
+            width: .75em;
+            height: .75em;
+            border-radius: 50%;
+            background-color: black;
+            margin-right: .75em;
+        }
+        h1 {
+            font-weight: 250;
+            font-size: 2em;
+            color: black;
+            text-align: center;
+            margin-top: 15%
+        }
+
+        .anNAME.NAME::before {
+            background-color: black;
+        }
+    </style>
+    <script>
+        $(function () {
+
+
+            $(".NAME").click(function () {
+
+                $(this).toggleClass("anNAME").next().slideToggle();
+
+            });
+
+
+
+
+        })
+    </script>
+
+</head>
+
+<body id="QUSAIFULL">
+    <h1>QUSAI YOUSEF</h1>
+
+    <div class="FULLNAME">
+        <div class="NAME">MY FULL NAME</div>
+        <div class="NAMEQUSAI">MY FULL NAME IS QUSAI YACOUB ALI YOUSEF</div>
+
+        <div class="NAME">MY FAVORITE HOBBY</div>
+        <div class="NAMEQUSAI">Swimming, reading stories, and writing thoughts.</div>
+
+        <div class="NAME">Where do I find myself in 5 years?</div>
+        <div class="NAMEQUSAI">I find myself in a place that is difficult for anyone to reach unless it is Qusai yacoub ali yousef himself</div>
+    </div>
+
+
+
+
+</body>
+
+</html>
